@@ -20,6 +20,14 @@ def validate_file(parser, file_path):
 
     return file_path
 
+
+def validate_target(parser, path_to_save):
+    if not os.path.isdir(path_to_save):
+        return parser.error("Invalid PATH TO SAVE.")
+
+    return path_to_save
+
+
 def get_arguments():
     parser = ArgumentParser(description="Youtube Audio Downloader")
     parser.add_argument(
@@ -27,8 +35,8 @@ def get_arguments():
         dest="path_file", required=True,
         help="Path to file that contains the youtube links")
     parser.add_argument(
-        "-p", metavar='PATH TO SAVE', type=str, dest="path_to_save",
-        default=".", help="Path to save the audios.")
+        "-p", metavar='PATH TO SAVE', type=lambda path: validate_target(parser, path),
+        dest="path_to_save", default=".", help="Path to save the audios.")
     # parser.add_argument(
     #     "-o", metavar='OVERRIDE', type=str, dest="override_songs",
     #     default="yes", help="Override the existing songs?")
