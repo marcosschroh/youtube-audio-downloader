@@ -21,7 +21,8 @@ class FileManager(object):
 
     @staticmethod
     def _get_links_from_txt(path_file):
-        pass
+        with open(path_file, 'r') as txt_file:
+            return [line for line in txt_file]
 
     @staticmethod
     def _get_links_from_csv(path_file):
