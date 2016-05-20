@@ -6,10 +6,8 @@
 from setuptools import setup
 
 setup(
-    name='youtube-audio-downloader',
-    packages=['youtube-audio-downloader'],
-    scripts=['scripts/ytdl'],
-    version='1.0',
+    name="youtube-audio-downloader",
+    version="1.0",
     description="Download audio from YouTube",
     keywords=["youtube-downloader", "downloader", "YouTube", "youtube", "download", "audio"],
     author="marcosschroh",
