@@ -19,5 +19,6 @@ setup(
         "pafy==0.5.0"
     ],
     scripts=["scripts/sound-down"],
+    packages=["sound_downloader"],
     license='GPLv3'
 )
