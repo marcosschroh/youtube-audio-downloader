@@ -2,8 +2,8 @@
 
 """Command Line Tool"""
 
-from arguments_parser import get_arguments
-from downloader import YoutubeAudioDownloader
+from sound_downloader.arguments_parser import get_arguments
+from sound_downloader.downloader import YoutubeAudioDownloader
 
 
 def main():
