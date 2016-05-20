@@ -2,8 +2,6 @@
  # -*- coding: utf-8 -*-
 
 import pafy
-
-from arguments_parser import get_arguments
 from file_manager import FileManager
 
 
@@ -24,11 +22,3 @@ class YoutubeAudioDownloader(object):
             video = pafy.new(link)
             bestaudio = video.getbestaudio()
             bestaudio.download(quiet=False, filepath=self.path_to_save)
-
-
-if __name__ == "__main__":
-    args = get_arguments()
-    path_file = args.path_file
-    path_to_save = args.path_to_save
-    downloader = YoutubeAudioDownloader(path_file, path_to_save=path_to_save)
-    downloader.download_audios()

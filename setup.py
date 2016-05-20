@@ -18,5 +18,6 @@ setup(
         "youtube-dl==2016.5.16",
         "pafy==0.5.0"
     ],
+    scripts=["scripts/sound-down"],
     license='GPLv3'
 )
