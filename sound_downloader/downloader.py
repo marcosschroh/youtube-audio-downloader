@@ -2,7 +2,7 @@
  # -*- coding: utf-8 -*-
 
 import pafy
-from file_manager import FileManager
+from .file_manager import FileManager
 
 
 class YoutubeAudioDownloader(object):
