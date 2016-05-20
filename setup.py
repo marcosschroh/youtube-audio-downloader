@@ -14,8 +14,8 @@ setup(
     keywords=["youtube-downloader", "downloader", "YouTube", "youtube", "download", "audio"],
     author="marcosschroh",
     author_email="marcos.06sch@gmail.com",
-    url="",
-    download_url="",
+    url="https://github.com/marcosschroh/youtube-audio-downloader",
+    download_url="https://github.com/marcosschroh/youtube-audio-downloader.git",
     install_requires=[
         "youtube-dl==2016.5.16",
         "pafy==0.5.0"
