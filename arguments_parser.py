@@ -37,9 +37,6 @@ def get_arguments():
     parser.add_argument(
         "-p", metavar='PATH TO SAVE', type=lambda path: validate_target(parser, path),
         dest="path_to_save", default=".", help="Path to save the audios.")
-    # parser.add_argument(
-    #     "-o", metavar='OVERRIDE', type=str, dest="override_songs",
-    #     default="yes", help="Override the existing songs?")
     args = parser.parse_args()
 
     return args

@@ -21,10 +21,9 @@ class YoutubeAudioDownloader(object):
     def download_audios(self):
         links = self._get_links(self.path_file)
         for link in links:
-            print(link)
-            # video = pafy.new(link)
-            # bestaudio = video.getbestaudio()
-            # bestaudio.download(quiet=False, filepath=self.path_to_save)
+            video = pafy.new(link)
+            bestaudio = video.getbestaudio()
+            bestaudio.download(quiet=False, filepath=self.path_to_save)
 
 
 if __name__ == "__main__":
