@@ -10,7 +10,7 @@
 ### Installation
 
 ```sh
-pip install git+https://github.com/marcosschroh/youtube-audio-downloader.git
+pip install youtube-audio-downloader
 ```
 
 ### Comand line usage
