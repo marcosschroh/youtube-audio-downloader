@@ -15,7 +15,7 @@ setup(
     url="https://github.com/marcosschroh/youtube-audio-downloader",
     download_url="https://github.com/marcosschroh/youtube-audio-downloader.git",
     install_requires=[
-        "youtube-dl==2016.5.16",
+        "youtube-dl==2017.11.15",
         "pafy==0.5.0"
     ],
     scripts=["scripts/sound-down"],
