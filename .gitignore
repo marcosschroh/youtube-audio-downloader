@@ -1,4 +1,7 @@
 __pycache__
 .venv
-.temp
-.webm
+*.temp
+*.webm
+
+*.egg-info
+/dist
