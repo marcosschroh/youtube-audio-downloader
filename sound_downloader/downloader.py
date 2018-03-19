@@ -1,5 +1,5 @@
- #!/usr/bin/python
- # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# !/usr/bin/python
 
 import pafy
 from .file_manager import FileManager
