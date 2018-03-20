@@ -4,7 +4,7 @@
 
 ## Features
 
-* Download multiple songs from youtube. Just give a .txt file or .csv file that contains the song's links.
+* Download multiple songs from youtube. Just give a .txt, .json or .csv file that contains the song's links.
 * Works with Python 2.6+ and Python 3.3+.
 
 ### Installation
@@ -27,13 +27,19 @@ optional arguments:
 
 ```
 
-### Examples
+### Comands Examples
 
 ```sh
 sound-down -f example.txt
 sound-down -f example.csv
 sound-down -f example.csv -p /home/my_user/music/
 ```
+
+### File Examples
+
+[json example](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/examples/example.json)
+[txt example](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/examples/example.txt)
+[csv example](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/examples/example.csv)
 
 ### Notes:
 

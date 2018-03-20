@@ -2,7 +2,7 @@ import os
 
 from argparse import ArgumentParser
 
-ALLOWED_FILE_EXTENSIONS = ("txt", "csv")
+ALLOWED_FILE_EXTENSIONS = ("txt", "csv", "json")
 
 
 def get_file_extension(path_file):
@@ -16,7 +16,7 @@ def validate_file(parser, file_path):
     file_extension = get_file_extension(file_path)
 
     if file_extension not in ALLOWED_FILE_EXTENSIONS:
-        return parser.error("Only allow .txt and .csv files.")
+        return parser.error("Only allow .txt, .json and .csv files.")
 
     return file_path
 

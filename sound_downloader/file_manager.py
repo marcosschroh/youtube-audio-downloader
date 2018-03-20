@@ -1,10 +1,12 @@
 import csv
+import json
 
 
 class FileManager(object):
     FILE_PROCESS_FUNCTION = {
         "txt": "_get_links_from_txt",
-        "csv": "_get_links_from_csv"
+        "csv": "_get_links_from_csv",
+        "json": "_get_links_from_json"
     }
 
     @staticmethod
@@ -32,3 +34,7 @@ class FileManager(object):
             for row in reader:
                 link_list.extend(row)
         return set(link_list)
+
+    @staticmethod
+    def _get_links_from_json(path_file):
+        return set(json.load(open(path_file)))
