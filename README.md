@@ -38,7 +38,9 @@ sound-down -f example.csv -p /home/my_user/music/
 ### File Examples
 
 [json example](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/examples/example.json)
+
 [txt example](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/examples/example.txt)
+
 [csv example](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/examples/example.csv)
 
 ### Notes:
