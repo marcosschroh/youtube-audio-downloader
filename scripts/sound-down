@@ -1,16 +1,24 @@
 #!/usr/bin/env python
 
 """Command Line Tool"""
+import click
 
-from sound_downloader.arguments_parser import get_arguments
+from sound_downloader.arguments_parser import validate_file, \
+ validate_target
 from sound_downloader.downloader import YoutubeAudioDownloader
 
 
-def main():
-    args = get_arguments()
-    path_file = args.path_file
-    path_to_save = args.path_to_save
-    downloader = YoutubeAudioDownloader(path_file, path_to_save=path_to_save)
+@click.command()
+@click.option(
+        "--file", callback=validate_file,
+        help="Path to file that contains the youtube links",
+        type=click.Path(exists=True))
+@click.option(
+        "--destiny", callback=validate_target,
+        default=".", help="Path to save the audios.",
+        type=str)
+def main(file, destiny):
+    downloader = YoutubeAudioDownloader(file, path_to_save=destiny)
     downloader.download_audios()
 
 
