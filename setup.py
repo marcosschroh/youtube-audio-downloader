@@ -19,7 +19,10 @@ setup(
         "pafy==0.5.0",
         "click==6.7"
     ],
-    scripts=["scripts/sound-down"],
     packages=["sound_downloader"],
-    license='GPLv3'
+    license='GPLv3',
+    entry_points='''
+        [console_scripts]
+        sound-down=scripts.sound_down:main
+    ''',
 )
