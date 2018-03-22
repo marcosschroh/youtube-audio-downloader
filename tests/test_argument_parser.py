@@ -42,5 +42,9 @@ class TestParserUtilitis(unittest.TestCase):
         with self.assertRaises(BadParameterException):
             validate_file('', 'file', self.INVALID_FILE)
 
+    def test_validate_file_does_not_exist(self):
+        with self.assertRaises(BadParameterException):
+            validate_file('', 'file', 'example.txt')
+
     def tearDown(self):
         os.remove(self.INVALID_FILE)

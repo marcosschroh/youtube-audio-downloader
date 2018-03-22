@@ -11,8 +11,7 @@ from sound_downloader.downloader import YoutubeAudioDownloader
 @click.command()
 @click.option(
         "--file", callback=validate_file,
-        help="Path to file that contains the youtube links",
-        type=click.Path(exists=True))
+        help="Path to file that contains the youtube links")
 @click.option(
         "--destiny", callback=validate_target,
         default=".", help="Path to save the audios.",

@@ -9,6 +9,10 @@ def get_file_extension(path_file):
 
 
 def validate_file(ctx, param, file_path_value):
+    if not file_path_value or not os.path.exists(file_path_value) or not os.path.isfile(file_path_value):
+        raise click.BadParameter(
+            "The file %s does not exists" % file_path_value)
+
     file_extension = get_file_extension(file_path_value)
 
     if file_extension not in ALLOWED_FILE_EXTENSIONS:
