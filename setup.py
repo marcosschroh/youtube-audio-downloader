@@ -17,7 +17,8 @@ setup(
     install_requires=[
         "youtube-dl==2017.11.15",
         "pafy==0.5.0",
-        "click==6.7"
+        "click==6.7",
+        "PyYAML==3.12"
     ],
     scripts=["scripts/sound-down"],
     packages=["sound_downloader"],

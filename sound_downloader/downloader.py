@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# !/usr/bin/python
 
 import pafy
 from .file_manager import FileManager
@@ -12,13 +11,26 @@ class YoutubeAudioDownloader(object):
         self.path_file = path_file
         self.path_to_save = path_to_save or self.PATH_TO_SAVE
 
-    @staticmethod
-    def _get_links(path_file):
-        return FileManager.get_links(path_file)
-
     def download_audios(self):
-        links = self._get_links(self.path_file)
+        conf = FileManager.get_conf(self.path_file)
+
+        links = conf.links
+        audio_formats = conf.audio_formats
+
         for link in links:
             video = pafy.new(link)
-            bestaudio = video.getbestaudio()
-            bestaudio.download(quiet=False, filepath=self.path_to_save)
+
+            audios = [
+                audio for audio in video.audiostreams if audio.extension in audio_formats]
+
+            # if there are not audios according to the extensions continue
+            # probably we need a logger
+            if not audios:
+                continue
+
+            # sort the audios: first by extension and then for quality
+            audios.sort(
+                key=lambda a: (audio_formats.index(a.extension), int(a.quality.strip('k')) * -1))
+
+            best_audio = audio[0]
+            best_audio.download(quiet=False, filepath=self.path_to_save)

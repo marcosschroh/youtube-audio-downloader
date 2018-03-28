@@ -1,0 +1,6 @@
+youtube-links: [
+  "https://www.youtube.com/watch?v=hTWKbfoikeg",
+  "https://www.youtube.com/watch?v=ygYYOeVoVgk"
+]
+
+audio-formats-priority: ['mp4', 'mp3', 'webm', 'm4a', 'ogg', 'wma']
