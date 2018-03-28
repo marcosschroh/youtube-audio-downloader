@@ -5,7 +5,7 @@ import collections
 Conf = collections.namedtuple('Conf', 'links audio_formats')
 
 
-class FileManager(object):
+class ConfManager(object):
 
     DEFAULT_AUDIO_FORMATS = ['mp4', 'mp3', 'webm', 'm4a', 'ogg', 'wma']
 

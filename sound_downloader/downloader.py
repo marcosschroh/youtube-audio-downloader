@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pafy
-from .file_manager import FileManager
+from .conf_manager import ConfManager
 
 
 class YoutubeAudioDownloader(object):
@@ -12,7 +12,7 @@ class YoutubeAudioDownloader(object):
         self.path_to_save = path_to_save or self.PATH_TO_SAVE
 
     def download_audios(self):
-        conf = FileManager.get_conf(self.path_file)
+        conf = ConfManager.get_conf(self.path_file)
 
         links = conf.links
         audio_formats = conf.audio_formats
