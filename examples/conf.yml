@@ -1,6 +1,11 @@
 youtube-links: [
   "https://www.youtube.com/watch?v=hTWKbfoikeg",
-  "https://www.youtube.com/watch?v=ygYYOeVoVgk"
+  "https://www.youtube.com/watch?v=ygYYOeVoVgk",
+  "https://www.youtube.com/watch?v=qYzY25b_uek"
 ]
 
 audio-formats-priority: ['mp4', 'mp3', 'webm', 'm4a', 'ogg', 'wma']
+
+show-download-progress: true
+
+overrride-audios: false

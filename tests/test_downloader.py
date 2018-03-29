@@ -8,13 +8,13 @@ from sound_downloader.downloader import YoutubeAudioDownloader
 class TestParserUtilitis(unittest.TestCase):
 
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    TARGET_FOLDER = os.path.join(BASE_DIR, os.pardir, "examples", "downloads")
-    CSV_FILE_PATH = os.path.join(BASE_DIR, os.pardir, "examples", "example.csv")
+    TARGET_FOLDER = os.path.join(BASE_DIR, "downloads")
+    CONF_FILE_PATH = os.path.join(BASE_DIR, os.pardir, "examples", "conf.yml")
 
     def setUp(self):
         os.makedirs(self.TARGET_FOLDER)
         self.downloader = YoutubeAudioDownloader(
-            path_file=self.CSV_FILE_PATH,
+            path_file=self.CONF_FILE_PATH,
             path_to_save=self.TARGET_FOLDER
         )
 

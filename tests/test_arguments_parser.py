@@ -2,16 +2,14 @@ import os
 import unittest
 from click import BadParameter as BadParameterException
 
-from sound_downloader.arguments_parser import validate_file, \
+from sound_downloader.arguments_parser import validate_config_file, \
  validate_target
 
 
 class TestParserUtilitis(unittest.TestCase):
 
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    CSV_FILE_PATH = os.path.join(BASE_DIR, os.pardir, "examples", "example.csv")
-    TXT_FILE_PATH = os.path.join(BASE_DIR, os.pardir, "examples", "example.txt")
-    JSON_FILE_PATH = os.path.join(BASE_DIR, os.pardir, "examples", "example.json")
+    CONF_FILE_PATH = os.path.join(BASE_DIR, os.pardir, "examples", "conf.yml")
     INVALID_FILE = os.path.join(BASE_DIR, "example.py")
 
     def setUp(self):
@@ -26,25 +24,17 @@ class TestParserUtilitis(unittest.TestCase):
 
     def test_validate_file(self):
         self.assertEqual(
-            validate_file('', 'file', self.CSV_FILE_PATH),
-            self.CSV_FILE_PATH
-        )
-        self.assertEqual(
-            validate_file('', 'file', self.TXT_FILE_PATH),
-            self.TXT_FILE_PATH
-        )
-        self.assertEqual(
-            validate_file('', 'file', self.JSON_FILE_PATH),
-            self.JSON_FILE_PATH
+            validate_config_file('', 'file', self.CONF_FILE_PATH),
+            self.CONF_FILE_PATH
         )
 
     def test_validate_file_invalid_extesion(self):
         with self.assertRaises(BadParameterException):
-            validate_file('', 'file', self.INVALID_FILE)
+            validate_config_file('', 'file', self.INVALID_FILE)
 
     def test_validate_file_does_not_exist(self):
         with self.assertRaises(BadParameterException):
-            validate_file('', 'file', 'example.txt')
+            validate_config_file('', 'file', 'example.txt')
 
     def tearDown(self):
         os.remove(self.INVALID_FILE)

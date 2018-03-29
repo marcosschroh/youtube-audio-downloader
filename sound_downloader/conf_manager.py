@@ -2,7 +2,10 @@ import sys
 import yaml
 import collections
 
-Conf = collections.namedtuple('Conf', 'links audio_formats')
+Conf = collections.namedtuple(
+    'Conf',
+    'links audio_formats show_download_progress overrride_audios'
+)
 
 
 class ConfManager(object):
@@ -22,5 +25,12 @@ class ConfManager(object):
             'audio-formats-priority',
             cls.DEFAULT_AUDIO_FORMATS
         )
+        show_download_progress = conf.get('show-download-progress', True)
+        overrride_audios = conf.get('overrride-audios', False)
 
-        return Conf(links=links, audio_formats=audio_formats)
+        return Conf(
+            links=links,
+            audio_formats=audio_formats,
+            show_download_progress=show_download_progress,
+            overrride_audios=overrride_audios
+        )
