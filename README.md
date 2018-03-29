@@ -22,30 +22,26 @@ Youtube Audio Downloader
 
 optional arguments:
   -h, --help       show this help message and exit
-  -f FILE          Path to file that contains the youtube links
-  -p PATH TO SAVE  Path to save the audios.
+  --conf FILE          Path to conf file
+  --destiny PATH TO SAVE  Path to save the audios.
 
 ```
 
 ### Comands Examples
 
 ```sh
-sound-down -f example.txt
-sound-down -f example.csv
-sound-down -f example.csv -p /home/my_user/music/
+sound-down --conf example_conf.yml
+sound-down --conf example_conf.yml --destiny /home/my_user/music/
 ```
 
-### File Examples
+### File Conf Example
 
-[json example](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/examples/example.json)
+[conf example](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/examples/example.yml)
 
-[txt example](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/examples/example.txt)
 
-[csv example](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/examples/example.csv)
+### Conf File Fields:
 
-### Notes:
 
-* In .txt file put one link per line
 
 
 

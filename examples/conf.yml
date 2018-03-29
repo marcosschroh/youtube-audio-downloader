@@ -4,7 +4,7 @@ youtube-links: [
   "https://www.youtube.com/watch?v=qYzY25b_uek"
 ]
 
-audio-formats-priority: ['mp4', 'mp3', 'webm', 'm4a', 'ogg', 'wma']
+audio-formats-priority: ['m4a', 'mp4', 'mp3', 'webm', 'ogg', 'wma']
 
 show-download-progress: true
 

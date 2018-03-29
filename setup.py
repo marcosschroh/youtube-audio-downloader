@@ -7,7 +7,7 @@ from setuptools import setup
 
 setup(
     name="youtube-audio-downloader",
-    version="1.1.5",
+    version="1.1.7",
     description="Download audio from YouTube",
     keywords=["youtube-downloader", "downloader", "YouTube", "youtube", "download", "audio"],
     author="marcosschroh",

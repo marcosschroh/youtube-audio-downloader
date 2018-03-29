@@ -11,9 +11,10 @@ class TestConfManager(unittest.TestCase):
     EXPECTES_RESULTS = {
         "links": [
             "https://www.youtube.com/watch?v=hTWKbfoikeg",
-            "https://www.youtube.com/watch?v=ygYYOeVoVgk"
+            "https://www.youtube.com/watch?v=ygYYOeVoVgk",
+            "https://www.youtube.com/watch?v=qYzY25b_uek"
         ],
-        "audio_formats": ['mp4', 'mp3', 'webm', 'm4a', 'ogg', 'wma']
+        "audio_formats": ['m4a', 'mp4', 'mp3', 'webm', 'ogg', 'wma']
     }
 
     def test_get_conf(self):
