@@ -4,7 +4,7 @@
 
 ## Features
 
-* Download multiple songs from youtube. Just give a .txt, .json or .csv file that contains the song's links.
+* Download multiple songs from youtube.
 * Works with Python 2.6+ and Python 3.3+.
 
 ### Installation
