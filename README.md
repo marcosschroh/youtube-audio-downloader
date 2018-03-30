@@ -39,11 +39,20 @@ sound-down --conf example_conf.yml --destiny /home/my_user/music/
 [conf example](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/examples/example.yml)
 
 
-### Conf File Fields:
+### Configuration:
+
+
+|    Options             |  Description                | Type  | Default |
+|:----------------------:|:---------------------------:|:-----:|:-------:|
+| youtube-links          | Youtube Links               | array |   []    |
+| audio-formats-priority | Priority of audio formats * | array |  ['m4a', 'mp4', 'mp3', 'webm', 'ogg', 'wma'] |
+| show-download-progress | Show the % of downloading per link  |  bool |   true  |
+| overrride-audios       | Whether override audios that already exist in the Save Folder. | bool |  false  |
 
 
 
 
+* Always try to get the best audio based on format and quality. With the default conf will try to get the best audio for m4a format, if does not exist will try to get the best for mp4 and so on.
 
 
 
