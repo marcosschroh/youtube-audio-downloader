@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """Command Line Tool"""
 import click
 

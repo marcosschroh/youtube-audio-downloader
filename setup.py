@@ -20,7 +20,10 @@ setup(
         "click==6.7",
         "PyYAML==3.12"
     ],
-    scripts=["scripts/sound-down"],
     packages=["sound_downloader"],
-    license='GPLv3'
+    license='GPLv3',
+    entry_points='''
+        [console_scripts]
+        sound-down=scripts.sound_down:main
+    ''',
 )
