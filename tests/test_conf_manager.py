@@ -19,9 +19,9 @@ class TestConfManager(unittest.TestCase):
 
     def test_get_conf(self):
         conf = ConfManager.get_conf(self.CONF_FILE_PATH)
-        self.assertEquals(
+        self.assertEqual(
             conf.links, self.EXPECTES_RESULTS.get('links'))
-        self.assertEquals(
+        self.assertEqual(
             conf.audio_formats,
             self.EXPECTES_RESULTS.get('audio_formats')
         )

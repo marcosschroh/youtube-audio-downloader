@@ -9,9 +9,13 @@ def get_file_extension(path_file):
 
 
 def validate_config_file(ctx, param, file_path_value):
-    if not file_path_value or not os.path.exists(file_path_value) or not os.path.isfile(file_path_value):
+    if not file_path_value:
         raise click.BadParameter(
-            "The config file %s does not exists" % file_path_value)
+            "Please provide a config file.")
+
+    if not os.path.exists(file_path_value) or not os.path.isfile(file_path_value):
+        raise click.BadParameter(
+            "The config file %s does not exists." % file_path_value)
 
     file_extension = get_file_extension(file_path_value)
 
