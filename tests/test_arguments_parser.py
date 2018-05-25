@@ -13,7 +13,8 @@ class TestParserUtilitis(unittest.TestCase):
     INVALID_FILE = os.path.join(BASE_DIR, "example.py")
 
     def setUp(self):
-        open(self.INVALID_FILE, 'w')
+        with open(self.INVALID_FILE, 'w') as _:
+            pass
 
     def test_validate_target(self):
         """

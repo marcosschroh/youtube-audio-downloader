@@ -5,9 +5,11 @@
 
 from setuptools import setup
 
+__version__ = "1.1.8"
+
 setup(
     name="youtube-audio-downloader",
-    version="1.1.7",
+    version=__version__,
     description="Download audio from YouTube",
     keywords=["youtube-downloader", "downloader", "YouTube", "youtube", "download", "audio"],
     author="marcosschroh",
@@ -24,6 +26,6 @@ setup(
     license='GPLv3',
     entry_points='''
         [console_scripts]
-        sound-down=scripts.sound_down:main
+        sound-down=sound_downloader.scripts.sound_down:main
     ''',
 )
