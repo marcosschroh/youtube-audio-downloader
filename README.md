@@ -1,5 +1,7 @@
 # SIMPLE YOUTUBE AUDIO DOWNLOADER
 
+[![Build Status](https://travis-ci.org/marcosschroh/youtube-audio-downloader.svg?branch=master)](https://travis-ci.org/marcosschroh/youtube-audio-downloader)
+
 ## Based on [PAFY](https://github.com/mps-youtube/pafy)
 
 ## Features
