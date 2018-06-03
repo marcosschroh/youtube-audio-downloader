@@ -2,7 +2,8 @@
 
 [![Build Status](https://travis-ci.org/marcosschroh/youtube-audio-downloader.svg?branch=master)](https://travis-ci.org/marcosschroh/youtube-audio-downloader)
 [![codecov](https://codecov.io/gh/dscovr/pyinstamation/branch/master/graph/badge.svg)](https://codecov.io/gh/marcosschroh/youtube-audio-downloader)
-[GitHub license](https://img.shields.io/github/license/marcosschroh/youtube-audio-downloader.svg)](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/marcosschroh/youtube-audio-downloader.svg)](https://github.com/marcosschroh/youtube-audio-downloader/blob/master/LICENSE)
+
 
 ## Based on [PAFY](https://github.com/mps-youtube/pafy)
 
