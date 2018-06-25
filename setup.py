@@ -3,9 +3,9 @@
 
 """ setup.py for youtube-audio-downloader."""
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
-__version__ = "1.1.8"
+__version__ = "1.1.9"
 
 setup(
     name="youtube-audio-downloader",
@@ -22,7 +22,7 @@ setup(
         "click==6.7",
         "PyYAML==3.12"
     ],
-    packages=["sound_downloader"],
+    packages=find_packages(),
     license='GPLv3',
     entry_points='''
         [console_scripts]
