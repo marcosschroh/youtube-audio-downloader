@@ -13,7 +13,7 @@ setup(
     description="Download audio from YouTube",
     keywords=["youtube-downloader", "downloader", "YouTube", "youtube", "download", "audio"],
     author="marcosschroh",
-    author_email="marcos.06sch@gmail.com",
+    author_email="schrohm@gmail.com",
     url="https://github.com/marcosschroh/youtube-audio-downloader",
     download_url="https://github.com/marcosschroh/youtube-audio-downloader.git",
     install_requires=[
@@ -23,6 +23,7 @@ setup(
         "PyYAML==3.12"
     ],
     packages=find_packages(),
+    include_package_data=True,
     license='GPLv3',
     entry_points='''
         [console_scripts]

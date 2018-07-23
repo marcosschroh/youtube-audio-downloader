@@ -18,21 +18,7 @@
 pip install youtube-audio-downloader
 ```
 
-### Comand line usage
-
-```sh
-usage: sound-down [-h] -f FILE [-p PATH TO SAVE]
-
-Youtube Audio Downloader
-
-optional arguments:
-  -h, --help       show this help message and exit
-  --conf FILE          Path to conf file
-  --destiny PATH TO SAVE  Path to save the audios.
-
-```
-
-### Comands Examples
+### Comands line usage
 
 ```sh
 sound-down --conf example_conf.yml
