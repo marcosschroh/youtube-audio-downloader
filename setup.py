@@ -3,9 +3,9 @@
 
 """ setup.py for youtube-audio-downloader."""
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
-__version__ = "1.1.8"
+__version__ = "1.1.9"
 
 setup(
     name="youtube-audio-downloader",
@@ -13,7 +13,7 @@ setup(
     description="Download audio from YouTube",
     keywords=["youtube-downloader", "downloader", "YouTube", "youtube", "download", "audio"],
     author="marcosschroh",
-    author_email="marcos.06sch@gmail.com",
+    author_email="schrohm@gmail.com",
     url="https://github.com/marcosschroh/youtube-audio-downloader",
     download_url="https://github.com/marcosschroh/youtube-audio-downloader.git",
     install_requires=[
@@ -22,7 +22,8 @@ setup(
         "click==6.7",
         "PyYAML==3.12"
     ],
-    packages=["sound_downloader"],
+    packages=find_packages(),
+    include_package_data=True,
     license='GPLv3',
     entry_points='''
         [console_scripts]

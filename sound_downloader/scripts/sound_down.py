@@ -21,4 +21,3 @@ def main(conf, destiny):
 
 if __name__ == "__main__":
     main()
-
