@@ -47,7 +47,6 @@ sound-down --conf example_conf.yml --destiny /home/my_user/music/
 
 * Override: If you want to download a sound and it already exists in the folder that you have specified to place it, the audio will be override or not according to the value of `overrride-audios`.
 
-
 ### TODO
 
 1. Show audio name or link in downloading process.
