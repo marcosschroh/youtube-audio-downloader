@@ -52,3 +52,9 @@ sound-down --conf example_conf.yml --destiny /home/my_user/music/
 1. Show audio name or link in downloading process.
 2. Maybe rethink using asyncio?
 3. Maybe add a UI?
+
+### Troubleshooting
+
+* In `Mac OSX` if you have  `ssl.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed`
+Just browse to `Applications/Python 3.6` and double-click `Install Certificates.command`
+There is an issue in the Python bug tracker about this [issue 29480](http://bugs.python.org/issue29480)
