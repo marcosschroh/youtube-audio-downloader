@@ -20,7 +20,7 @@ setup(
         "youtube-dl==2017.11.15",
         "pafy==0.5.0",
         "click==6.7",
-        "PyYAML==3.12"
+        "PyYAML==5.1"
     ],
     packages=find_packages(),
     include_package_data=True,
